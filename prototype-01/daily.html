@@ -3,33 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profile — Prototype One</title>
+  <title>Daily — Prototype 01</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app">
-    <main class="content content--profile">
+    <main class="content">
       <header class="screen-header">
-        <h1>Profile</h1>
-        <p>Demo User</p>
+        <h1>Daily Plan</h1>
+        <p>Today's memory training games</p>
       </header>
 
-      <section class="profile-section">
-        <span class="label">Your RAM score</span>
-        <div class="ram-badge ram-badge--high">RAM 72</div>
-      </section>
+      <div class="game-list">
+        <a class="game-card" href="#">
+          <div class="game-card__body">
+            <h2 class="game-card__title">Number Sequence</h2>
+            <p class="game-card__description">Remember the order of numbers shown.</p>
+            <span class="game-card__status game-card__status--done">Completed</span>
+          </div>
+          <svg class="icon game-card__chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"/>
+          </svg>
+        </a>
 
-      <p class="profile-copy">Keep playing daily games to improve your memory performance.</p>
+        <a class="game-card" href="#">
+          <div class="game-card__body">
+            <h2 class="game-card__title">Card Pairs</h2>
+            <p class="game-card__description">Match pairs of cards from memory.</p>
+            <span class="game-card__status game-card__status--pending">Pending</span>
+          </div>
+          <svg class="icon game-card__chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"/>
+          </svg>
+        </a>
 
-      <div class="profile-spacer" aria-hidden="true"></div>
-
-      <footer class="profile-footer">
-        <button type="button" class="btn-secondary">Sign out</button>
-      </footer>
+        <a class="game-card" href="#">
+          <div class="game-card__body">
+            <h2 class="game-card__title">Word Recall</h2>
+            <p class="game-card__description">Recall words after a short delay.</p>
+            <span class="game-card__status game-card__status--pending">Pending</span>
+          </div>
+          <svg class="icon game-card__chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"/>
+          </svg>
+        </a>
+      </div>
     </main>
 
     <nav class="tab-bar" aria-label="Main navigation">
-      <a class="tab-item" href="daily.html">
+      <a class="tab-item tab-item--active" href="daily.html" aria-current="page">
         <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M16 2V6M8 2V6"/>
           <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z"/>
@@ -46,7 +68,7 @@
         </svg>
         Games
       </a>
-      <a class="tab-item tab-item--active" href="profile.html" aria-current="page">
+      <a class="tab-item" href="profile.html">
         <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"/>
           <path d="M14 14H10C7.23858 14 5 16.2386 5 19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19C19 16.2386 16.7614 14 14 14Z"/>

@@ -1,0 +1,335 @@
+/* Snapshot from shared/design-tokens/tokens.json — prototype-only, self-contained */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --color-primary: #2F2922;
+  --color-primary-foreground: #FFFFFF;
+  --color-background: #FDF9F4;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #2F2922;
+  --color-text-secondary: rgba(0, 0, 0, 0.5);
+  --color-ram-score-high: #3AD7A4;
+  --color-ram-score-low: #FE8B8B;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-accent: #FEDF8B;
+  --color-tertiary: rgba(47, 41, 34, 0.05);
+  --color-accent100: #FFEFC4;
+  --color-gray100: #EBEBEB;
+  --palette-background: #FDF9F4;
+  --palette-foreground: #FFFFFF;
+  --palette-primary-element: #2F2922;
+  --palette-secondary-element: rgba(0, 0, 0, 0.5);
+  --palette-tertiary-element: rgba(47, 41, 34, 0.05);
+  --palette-border: rgba(0, 0, 0, 0.1);
+  --palette-accent: #FEDF8B;
+  --palette-accent100: #FFEFC4;
+  --palette-gray100: #EBEBEB;
+  --palette-white: #FFFFFF;
+  --palette-black: #2F2922;
+  --palette-danger: #FE8B8B;
+  --palette-green: #3AD7A4;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --palette-background: #000000;
+    --palette-foreground: #3F3E3D;
+    --palette-primary-element: #FFFFFF;
+    --palette-secondary-element: #E2E2E2;
+    --palette-tertiary-element: rgba(253, 249, 244, 0.15);
+    --palette-border: rgba(255, 255, 255, 0.3);
+    --palette-accent: #FEDF8B;
+    --palette-accent100: #FFEFC4;
+    --palette-gray100: #787878;
+    --palette-white: #FFFFFF;
+    --palette-black: #2F2922;
+    --palette-danger: #FFA6A6;
+    --palette-green: #44D7A8;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  margin: 0;
+  min-height: 100dvh;
+}
+
+/* Typography */
+.title-large {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+}
+
+.title-medium {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* App shell */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  max-width: 430px;
+  margin: 0 auto;
+  background: var(--color-background);
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: var(--spacing-xl);
+}
+
+.content--profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.content--profile .profile-spacer {
+  flex: 1;
+}
+
+/* Screen header */
+.screen-header {
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.screen-header h1 {
+  margin: 0 0 var(--spacing-xs);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+  color: var(--color-text-primary);
+}
+
+.screen-header p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-text-secondary);
+}
+
+/* Game list */
+.game-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md);
+}
+
+/* Game card */
+.game-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+}
+
+.game-card--featured {
+  align-items: flex-start;
+}
+
+.game-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.game-card__title {
+  margin: 0 0 var(--spacing-xs);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--color-text-primary);
+}
+
+.game-card__description {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-text-secondary);
+}
+
+.game-card__status {
+  display: inline-block;
+  margin-top: var(--spacing-xs);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.game-card__status--done {
+  color: var(--color-ram-score-high);
+}
+
+.game-card__status--pending {
+  color: var(--color-text-secondary);
+}
+
+.game-card__chevron {
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.game-card .btn-primary {
+  margin-top: var(--spacing-sm);
+  width: 100%;
+}
+
+/* Buttons */
+.btn-primary {
+  display: block;
+  width: 100%;
+  height: 52px;
+  padding: 0 var(--spacing-md);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--color-primary-foreground);
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-secondary {
+  display: block;
+  width: 100%;
+  height: 52px;
+  padding: 0 var(--spacing-md);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Profile */
+.profile-section {
+  padding: 0 var(--spacing-md);
+}
+
+.profile-section .label {
+  display: block;
+  color: var(--color-text-secondary);
+}
+
+.ram-badge {
+  display: inline-block;
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+  border-radius: var(--radius-md);
+}
+
+.ram-badge--high {
+  color: var(--color-ram-score-high);
+  background: color-mix(in srgb, var(--color-ram-score-high) 15%, transparent);
+}
+
+.ram-badge--low {
+  color: var(--color-ram-score-low);
+  background: color-mix(in srgb, var(--color-ram-score-low) 15%, transparent);
+}
+
+.ram-badge--mid {
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 15%, transparent);
+}
+
+.profile-copy {
+  margin: 0;
+  padding: var(--spacing-md);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-text-secondary);
+}
+
+.profile-footer {
+  padding: var(--spacing-md);
+}
+
+/* Tab bar */
+.tab-bar {
+  display: flex;
+  flex-shrink: 0;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: var(--spacing-sm) 0;
+}
+
+.tab-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.tab-item--active {
+  color: var(--color-primary);
+}
+
+.tab-item .icon {
+  display: block;
+}
