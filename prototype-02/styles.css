@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --bg-cream: #F9F7F2;
@@ -27,9 +27,14 @@
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --nav-height: 88px;
+  --font: 'Inter', system-ui, sans-serif;
+  --text-title-size: 14px;
+  --text-title-weight: 700;
+  --text-title-line: 16px;
+  --text-body-size: 14px;
+  --text-body-weight: 400;
+  --text-body-line: 24px;
+  --nav-height: 72px;
 }
 
 *,
@@ -40,15 +45,20 @@
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font);
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line);
   background: var(--bg-cream);
   color: var(--brown);
   min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
 }
 
-.serif {
-  font-family: var(--font-serif);
+.text-title {
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
 }
 
 /* App shell */
@@ -127,18 +137,17 @@ body {
 /* Page title */
 .page-greeting {
   margin: 0 0 var(--spacing-lg);
-  font-family: var(--font-serif);
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 24px;
   color: var(--brown);
 }
 
 .page-greeting span {
   display: block;
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line);
   color: var(--brown-muted);
   margin-top: 4px;
 }
@@ -168,9 +177,9 @@ body {
 }
 
 .card-header__title {
-  font-family: var(--font-serif);
-  font-size: 15px;
-  font-weight: 700;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
   color: var(--brown);
 }
 
@@ -208,9 +217,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 32px;
-  font-weight: 800;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
   color: var(--brown);
 }
 
@@ -238,10 +247,9 @@ body {
 
 .unlock-card p {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.35;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
   color: var(--brown);
 }
 
@@ -276,9 +284,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 18px;
-  font-weight: 700;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
 }
 
 .target-ring--done {
@@ -317,8 +324,9 @@ body {
 
 .insight-card__text {
   margin: 0 0 var(--spacing-md);
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line);
   color: var(--brown-muted);
   font-style: italic;
 }
@@ -330,9 +338,10 @@ body {
   border: none;
   border-radius: var(--radius-md);
   background: var(--gray-soft);
-  font-family: var(--font-serif);
-  font-size: 15px;
-  font-weight: 700;
+  font-family: inherit;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
   color: var(--brown);
   cursor: pointer;
   text-align: center;
@@ -386,14 +395,16 @@ body {
 
 .session-card__title {
   margin: 0 0 2px;
-  font-family: var(--font-serif);
-  font-size: 16px;
-  font-weight: 700;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
 }
 
 .session-card__meta {
   margin: 0;
-  font-size: 13px;
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line);
   color: var(--brown-muted);
 }
 
@@ -428,15 +439,16 @@ body {
 
 .games-hero h2 {
   margin: 0 0 var(--spacing-sm);
-  font-family: var(--font-serif);
-  font-size: 24px;
-  font-weight: 800;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
 }
 
 .games-hero p {
   margin: 0 0 var(--spacing-lg);
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line);
   opacity: 0.85;
 }
 
@@ -446,9 +458,10 @@ body {
   border: none;
   border-radius: var(--radius-pill);
   background: var(--lime);
-  font-family: var(--font-serif);
-  font-size: 15px;
-  font-weight: 700;
+  font-family: inherit;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
   color: var(--forest-deep);
   cursor: pointer;
   text-decoration: none;
@@ -490,14 +503,16 @@ body {
 
 .game-tile__body h3 {
   margin: 0 0 2px;
-  font-family: var(--font-serif);
-  font-size: 16px;
-  font-weight: 700;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
 }
 
 .game-tile__body p {
   margin: 0;
-  font-size: 13px;
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line);
   color: var(--brown-muted);
 }
 
@@ -520,14 +535,14 @@ body {
 }
 
 .profile-hero .score-ring__value {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 .profile-hero h1 {
   margin: 0 0 4px;
-  font-family: var(--font-serif);
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .profile-hero .persona-badge {
@@ -558,9 +573,9 @@ body {
 
 .stat-card__value {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: 800;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
   color: var(--brown);
 }
 
@@ -577,15 +592,16 @@ body {
 
 .palace-card h3 {
   margin: 0 0 var(--spacing-sm);
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 800;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
 }
 
 .palace-card p {
   margin: 0 0 var(--spacing-md);
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line);
   color: var(--brown-muted);
 }
 
@@ -596,9 +612,10 @@ body {
   border: none;
   border-radius: var(--radius-md);
   background: var(--forest);
-  font-family: var(--font-serif);
-  font-size: 15px;
-  font-weight: 700;
+  font-family: inherit;
+  font-size: var(--text-title-size);
+  font-weight: var(--text-title-weight);
+  line-height: var(--text-title-line);
   color: #fff;
   cursor: pointer;
   text-align: center;
@@ -624,7 +641,7 @@ body {
   text-align: center;
 }
 
-/* Bottom nav — Alma style */
+/* Bottom nav */
 .tab-bar {
   position: fixed;
   bottom: 0;
@@ -633,9 +650,9 @@ body {
   width: 100%;
   max-width: 430px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
-  padding: 12px var(--spacing-md) 28px;
+  padding: 12px var(--spacing-md) 24px;
   background: rgba(249, 247, 242, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -668,24 +685,4 @@ body {
   width: 24px;
   height: 24px;
   color: var(--brown-muted);
-}
-
-.tab-fab {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  margin-top: -28px;
-  border-radius: 50%;
-  background: var(--forest);
-  color: #fff;
-  box-shadow: 0 8px 24px rgba(61, 82, 41, 0.35);
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.tab-fab svg {
-  width: 28px;
-  height: 28px;
 }
