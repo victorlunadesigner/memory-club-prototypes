@@ -1,79 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daily — Prototype 02</title>
+  <title>Hoje — Prototype 02</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app">
     <main class="content">
-      <header class="screen-header">
-        <h1>Daily Plan</h1>
-        <p>Today's memory training games</p>
+      <header class="top-bar">
+        <button type="button" class="icon-btn" aria-label="Notificações">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+        </button>
+        <div class="logo-mark" aria-label="Clube da Memória">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v4M8 7h8M6 11h12v10H6z"/>
+            <circle cx="12" cy="16" r="2"/>
+          </svg>
+        </div>
+        <a href="#" class="streak-pill" aria-label="Sequência de 7 dias">
+          <span class="streak-pill__icon" aria-hidden="true">🔥</span>
+          <span>7</span>
+        </a>
       </header>
 
-      <div class="game-list">
-        <a class="game-card" href="#">
-          <div class="game-card__body">
-            <h2 class="game-card__title">Number Sequence</h2>
-            <p class="game-card__description">Remember the order of numbers shown.</p>
-            <span class="game-card__status game-card__status--done">Completed</span>
+      <h1 class="page-greeting">
+        Bom dia, Lucas
+        <span>5 minutos para fortalecer sua memória</span>
+      </h1>
+
+      <div class="card-row">
+        <a href="profile.html" class="card card-link">
+          <div class="card-header">
+            <span class="card-header__title">RAM Score</span>
+            <span aria-hidden="true">›</span>
           </div>
-          <svg class="icon game-card__chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"/>
-          </svg>
+          <div class="score-ring" aria-label="RAM Score 72 de 100">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="score-ring__track" cx="50" cy="50" r="40"/>
+              <circle class="score-ring__fill" cx="50" cy="50" r="40"
+                stroke-dasharray="251.2" stroke-dashoffset="70"/>
+            </svg>
+            <span class="score-ring__value">72</span>
+          </div>
         </a>
 
-        <a class="game-card" href="#">
-          <div class="game-card__body">
-            <h2 class="game-card__title">Card Pairs</h2>
-            <p class="game-card__description">Match pairs of cards from memory.</p>
-            <span class="game-card__status game-card__status--pending">Pending</span>
+        <div class="card unlock-card">
+          <div class="card-header">
+            <span class="card-header__title">Palácio</span>
+            <span aria-hidden="true">›</span>
           </div>
-          <svg class="icon game-card__chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"/>
-          </svg>
-        </a>
+          <p>Desbloqueie o método de memorização</p>
+        </div>
+      </div>
 
-        <a class="game-card" href="#">
-          <div class="game-card__body">
-            <h2 class="game-card__title">Word Recall</h2>
-            <p class="game-card__description">Recall words after a short delay.</p>
-            <span class="game-card__status game-card__status--pending">Pending</span>
+      <section class="card targets-card" aria-label="Treino de hoje">
+        <div class="card-header">
+          <span class="card-header__title">Treino de hoje</span>
+          <span aria-hidden="true">›</span>
+        </div>
+        <div class="targets-row">
+          <a href="#" class="target-item">
+            <div class="target-ring target-ring--done" aria-label="Concluído">✓</div>
+            <span class="target-label">Sequência</span>
+          </a>
+          <a href="#" class="target-item">
+            <div class="target-ring target-ring--next" aria-label="Próximo">2</div>
+            <span class="target-label">Pares</span>
+          </a>
+          <a href="#" class="target-item">
+            <div class="target-ring target-ring--pending" aria-label="Pendente">3</div>
+            <span class="target-label">Palavras</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="card insight-card">
+        <div class="insight-card__icon" aria-hidden="true">🧠</div>
+        <p class="insight-card__text">"Sem revisão espaçada, você esquece 90% do que estudou em 30 dias. Cinco minutos hoje valem mais que horas de releitura."</p>
+        <a href="#" class="btn-soft">Ver curva do esquecimento</a>
+      </section>
+
+      <h2 class="section-label">Sessões de hoje</h2>
+      <div class="session-list">
+        <a href="#" class="session-card">
+          <div class="session-card__icon" aria-hidden="true">🔢</div>
+          <div class="session-card__body">
+            <h3 class="session-card__title">Sequência Numérica</h3>
+            <p class="session-card__meta">~2 min · memória de trabalho</p>
           </div>
-          <svg class="icon game-card__chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"/>
-          </svg>
+          <span class="session-card__status session-card__status--done">Feito</span>
+        </a>
+        <a href="#" class="session-card">
+          <div class="session-card__icon" aria-hidden="true">🃏</div>
+          <div class="session-card__body">
+            <h3 class="session-card__title">Pares de Cartas</h3>
+            <p class="session-card__meta">~2 min · associação visual</p>
+          </div>
+          <span class="session-card__status session-card__status--pending">Próximo</span>
+        </a>
+        <a href="#" class="session-card">
+          <div class="session-card__icon" aria-hidden="true">📝</div>
+          <div class="session-card__body">
+            <h3 class="session-card__title">Recuperação de Palavras</h3>
+            <p class="session-card__meta">~2 min · retenção ativa</p>
+          </div>
+          <span class="session-card__status session-card__status--pending">Pendente</span>
         </a>
       </div>
     </main>
 
-    <nav class="tab-bar" aria-label="Main navigation">
+    <nav class="tab-bar" aria-label="Navegação principal">
       <a class="tab-item tab-item--active" href="daily.html" aria-current="page">
-        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M16 2V6M8 2V6"/>
-          <path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z"/>
-          <path d="M3 10H21"/>
-          <path d="M12.1258 14H12.0008M12.1258 18H12.0008M7.625 14H7.5M7.625 18H7.5M16.625 14H16.5M12.2508 14C12.2508 14.1381 12.1389 14.25 12.0008 14.25C11.8628 14.25 11.7508 14.1381 11.7508 14C11.7508 13.8619 11.8628 13.75 12.0008 13.75C12.1389 13.75 12.2508 13.8619 12.2508 14ZM12.2508 18C12.2508 18.1381 12.1389 18.25 12.0008 18.25C11.8628 18.25 11.7508 18.1381 11.7508 18C11.7508 17.8619 11.8628 17.75 12.0008 17.75C12.1389 17.75 12.2508 17.8619 12.2508 18ZM7.75 14C7.75 14.1381 7.63807 14.25 7.5 14.25C7.36193 14.25 7.25 14.1381 7.25 14C7.25 13.8619 7.36193 13.75 7.5 13.75C7.63807 13.75 7.75 13.8619 7.75 14ZM7.75 18C7.75 18.1381 7.63807 18.25 7.5 18.25C7.36193 18.25 7.25 18.1381 7.25 18C7.25 17.8619 7.36193 17.75 7.5 17.75C7.63807 17.75 7.75 17.8619 7.75 18ZM16.75 14C16.75 14.1381 16.6381 14.25 16.5 14.25C16.3619 14.25 16.25 14.1381 16.25 14C16.25 13.8619 16.3619 13.75 16.5 13.75C16.6381 13.75 16.75 13.8619 16.75 14Z"/>
+        <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/>
         </svg>
-        Daily
+        Hoje
+      </a>
+      <a class="tab-fab" href="#" aria-label="Iniciar treino">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
       </a>
       <a class="tab-item" href="games.html">
-        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M11 13H13"/>
-          <path d="M12 9V3"/>
-          <path d="M20.1526 20.9174C22.0143 20.3289 22.5597 16.7547 21.3708 12.9344C20.1819 9.11398 17.709 6.49405 15.8474 7.08259C14.6972 7.44619 14.6438 8.86174 13.6968 9.378C13.473 9.5 13.1595 9.5 12.5324 9.5H11.4676C10.8405 9.5 10.527 9.5 10.3032 9.378C9.35625 8.86174 9.30278 7.44619 8.15264 7.08259C6.29102 6.49405 3.8181 9.11398 2.62922 12.9344C1.44035 16.7547 1.98573 20.3289 3.84736 20.9174C5.20631 21.347 6.891 20.067 8.16417 17.8583C9.01333 16.3851 9.39787 16 11.1039 16H12.8961C14.6021 16 14.9867 16.3851 15.8358 17.8583C17.109 20.067 18.7937 21.347 20.1526 20.9174Z"/>
+        <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 13H13"/><path d="M12 9V3"/>
+          <path d="M20.15 20.92C22.01 20.33 22.56 16.75 21.37 12.93C20.18 9.11 17.71 6.49 15.85 7.08C14.7 7.45 14.64 8.86 13.7 9.38C13.47 9.5 13.16 9.5 12.53 9.5h-1.07c-.63 0-.94 0-1.17-.12-.94-.52-1-1.93-2.15-2.3-1.86-.59-4.33 2.03-5.52 5.85-1.19 3.82-.64 7.39 1.22 7.98C6.21 21.35 7.89 20.07 9.16 17.86C10.01 16.39 10.4 16 12.1 16h1.8c1.7 0 2.09.39 2.94 1.86c1.27 2.21 2.95 3.49 4.31 3.06z"/>
         </svg>
-        Games
+        Jogos
       </a>
       <a class="tab-item" href="profile.html">
-        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"/>
-          <path d="M14 14H10C7.23858 14 5 16.2386 5 19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19C19 16.2386 16.7614 14 14 14Z"/>
+        <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+          <path d="M14 14H10c-2.76 0-5 2.24-5 5 0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2 0-2.76-2.24-5-5-5z"/>
         </svg>
-        Profile
+        Perfil
       </a>
     </nav>
   </div>
