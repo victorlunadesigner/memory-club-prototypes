@@ -21,14 +21,18 @@
       <header class="home-header">
         <h1 class="home-header__greeting">Olá, Rafael!</h1>
         <a href="profile.html" class="points-pill" aria-label="445 pontos">
-          <span class="points-pill__icon" aria-hidden="true">🧠</span>
+          <span class="points-pill__icon">
+            <img src="assets/icon-brain.png" width="24" height="24" alt="" aria-hidden="true">
+          </span>
           <span class="points-pill__value">445</span>
         </a>
       </header>
 
       <section class="card streak-card" aria-label="Sequência semanal">
         <div class="card-header">
-          <span class="card-header__icon card-header__icon--fire" aria-hidden="true">🔥</span>
+          <span class="card-header__icon">
+            <img src="assets/icon-fire.png" width="24" height="24" alt="" aria-hidden="true">
+          </span>
           <span class="card-header__title">Sequência semanal</span>
           <svg class="card-header__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
             <path d="M9 6l6 6-6 6"/>
@@ -42,7 +46,9 @@
                 <circle class="streak-day__fill streak-day__fill--green" cx="18" cy="18" r="15"
                   stroke-dasharray="94.2" stroke-dashoffset="0"/>
               </svg>
-              <span class="streak-day__brain" aria-hidden="true">🧠</span>
+              <span class="streak-day__brain">
+                <img src="assets/brain-mascot.png" width="22" height="22" alt="" aria-hidden="true">
+              </span>
             </div>
             <span class="streak-day__label">Dom</span>
           </div>
@@ -53,7 +59,9 @@
                 <circle class="streak-day__fill streak-day__fill--green" cx="18" cy="18" r="15"
                   stroke-dasharray="94.2" stroke-dashoffset="0"/>
               </svg>
-              <span class="streak-day__brain" aria-hidden="true">🧠</span>
+              <span class="streak-day__brain">
+                <img src="assets/brain-mascot.png" width="22" height="22" alt="" aria-hidden="true">
+              </span>
             </div>
             <span class="streak-day__label">Seg</span>
           </div>
@@ -64,7 +72,9 @@
                 <circle class="streak-day__fill streak-day__fill--orange" cx="18" cy="18" r="15"
                   stroke-dasharray="94.2" stroke-dashoffset="23"/>
               </svg>
-              <span class="streak-day__brain" aria-hidden="true">🧠</span>
+              <span class="streak-day__brain">
+                <img src="assets/brain-mascot.png" width="22" height="22" alt="" aria-hidden="true">
+              </span>
             </div>
             <span class="streak-day__label">Ter</span>
           </div>
@@ -75,7 +85,9 @@
                 <circle class="streak-day__fill streak-day__fill--orange" cx="18" cy="18" r="15"
                   stroke-dasharray="94.2" stroke-dashoffset="47"/>
               </svg>
-              <span class="streak-day__brain" aria-hidden="true">🧠</span>
+              <span class="streak-day__brain">
+                <img src="assets/brain-mascot.png" width="22" height="22" alt="" aria-hidden="true">
+              </span>
             </div>
             <span class="streak-day__label">Qua</span>
           </div>
@@ -113,9 +125,7 @@
           <svg class="training-card__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
             <path d="M9 6l6 6-6 6"/>
           </svg>
-          <div class="training-card__thumb training-card__thumb--pairs" aria-hidden="true">
-            <span>🍎</span><span>❓</span><span>🧸</span><span>❓</span>
-          </div>
+          <img class="training-card__thumb" src="assets/thumb-paired-associates.png" width="64" height="64" alt="" aria-hidden="true">
           <h3 class="training-card__title">Paired associates</h3>
           <p class="training-card__desc">Memorize a posição de cada par</p>
           <div class="training-card__footer">
@@ -133,9 +143,7 @@
           <svg class="training-card__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
             <path d="M9 6l6 6-6 6"/>
           </svg>
-          <div class="training-card__thumb training-card__thumb--digits" aria-hidden="true">
-            <span>7</span><span>2</span><span>9</span><span>4</span>
-          </div>
+          <img class="training-card__thumb" src="assets/thumb-digit-span.png" width="64" height="64" alt="" aria-hidden="true">
           <h3 class="training-card__title">Digit span</h3>
           <p class="training-card__desc">Memorize a sequência e repita na ordem</p>
           <div class="training-card__footer">
@@ -152,7 +160,9 @@
 
       <section class="card ram-card" aria-label="Teste R.A.M">
         <div class="card-header">
-          <span class="card-header__icon card-header__icon--brain" aria-hidden="true">🧠</span>
+          <span class="card-header__icon">
+            <img src="assets/icon-brain.png" width="24" height="24" alt="" aria-hidden="true">
+          </span>
           <span class="card-header__title">Teste R.A.M</span>
           <svg class="card-header__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
             <path d="M9 6l6 6-6 6"/>
@@ -188,11 +198,7 @@
       <div class="palace-grid">
         <a href="#" class="palace-tile">
           <div class="palace-tile__visual">
-            <div class="palace-tile__cards" aria-hidden="true">
-              <div class="playing-card playing-card--q">Q<span class="playing-card__suit">♥</span></div>
-              <div class="playing-card playing-card--j">J<span class="playing-card__suit">♦</span></div>
-              <div class="playing-card playing-card--k">K<span class="playing-card__suit">♣</span></div>
-            </div>
+            <img src="assets/palace-cards.png" alt="" aria-hidden="true">
           </div>
           <div class="palace-tile__body">
             <h3 class="palace-tile__title">Cartas</h3>
@@ -216,12 +222,7 @@
 
         <a href="#" class="palace-tile">
           <div class="palace-tile__visual">
-            <div class="palace-tile__numbers" aria-hidden="true">
-              <div class="num-tile num-tile--green">7</div>
-              <div class="num-tile">5</div>
-              <div class="num-tile">1</div>
-              <div class="num-tile num-tile--red">2</div>
-            </div>
+            <img src="assets/palace-numbers.png" alt="" aria-hidden="true">
           </div>
           <div class="palace-tile__body">
             <h3 class="palace-tile__title">Números</h3>
