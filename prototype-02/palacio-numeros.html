@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palácio de Números — Prototype 02</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <main class="content content--palace-builder">
+      <nav class="game-detail-nav" aria-label="Voltar">
+        <a href="palacio.html" class="game-detail-nav__back">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M15 6l-6 6 6 6"/>
+          </svg>
+          Palácio
+        </a>
+      </nav>
+
+      <div class="palace-builder-hero palace-builder-hero--numbers">
+        <img class="palace-builder-hero__img" src="assets/palace-numbers.png" alt="" aria-hidden="true">
+        <div class="palace-builder-hero__overlay"></div>
+        <h1 class="palace-builder-hero__title">Palácio de Números</h1>
+        <p class="palace-builder-hero__desc">Converta dígitos em imagens e fixe sequências longas no seu percurso mental</p>
+      </div>
+
+      <div class="palace-builder-progress" aria-label="Progresso do palácio">
+        <div class="palace-builder-progress__item palace-builder-progress__item--active">
+          <span class="palace-builder-progress__dot" aria-hidden="true"></span>
+          <span>Ambiente</span>
+        </div>
+        <div class="palace-builder-progress__item">
+          <span class="palace-builder-progress__dot" aria-hidden="true"></span>
+          <span>Pontos</span>
+        </div>
+        <div class="palace-builder-progress__item">
+          <span class="palace-builder-progress__dot" aria-hidden="true"></span>
+          <span>Sistema</span>
+        </div>
+        <div class="palace-builder-progress__item">
+          <span class="palace-builder-progress__dot" aria-hidden="true"></span>
+          <span>Memorizar</span>
+        </div>
+      </div>
+
+      <section class="card palace-empty-state" aria-label="Palácio não iniciado">
+        <p class="palace-empty-state__title">Nenhum palácio criado ainda</p>
+        <p class="palace-empty-state__text">
+          Com o método dos Loci, você transforma cada par de dígitos (00–99) em uma imagem fixa e distribui essas imagens pelos pontos do seu percurso. Na prova, basta caminhar mentalmente pelo palácio para recuperar pi, prazos processuais ou códigos inteiros.
+        </p>
+      </section>
+
+      <section class="palace-builder-section" aria-labelledby="env-num-title">
+        <h2 class="palace-builder-section__title" id="env-num-title">
+          <span class="palace-builder-section__step">1</span>
+          Escolha o ambiente
+        </h2>
+        <p class="palace-builder-section__hint">Um espaço fechado com caminho fixo funciona melhor — evite mudar a rota depois de começar.</p>
+        <div class="palace-env-grid" role="list">
+          <div class="palace-env-option" role="listitem">
+            <span class="palace-env-option__icon" aria-hidden="true">🏠</span>
+            <span class="palace-env-option__label">Minha casa</span>
+          </div>
+          <div class="palace-env-option" role="listitem">
+            <span class="palace-env-option__icon" aria-hidden="true">🏢</span>
+            <span class="palace-env-option__label">Trabalho</span>
+          </div>
+          <div class="palace-env-option" role="listitem">
+            <span class="palace-env-option__icon" aria-hidden="true">📚</span>
+            <span class="palace-env-option__label">Biblioteca</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="palace-builder-section" aria-labelledby="points-num-title">
+        <h2 class="palace-builder-section__title" id="points-num-title">
+          <span class="palace-builder-section__step">2</span>
+          Mapear 12 pontos magnéticos
+        </h2>
+        <p class="palace-builder-section__hint">Cada ponto guarda um grupo de 6 dígitos (3 imagens PAO) ou 2 pares de dígitos, conforme o sistema escolhido.</p>
+        <div class="palace-stations palace-stations--empty" aria-label="Pontos a definir">
+          <div class="palace-station palace-station--placeholder">
+            <span class="palace-station__num">1</span>
+            <span class="palace-station__name">Definir ponto</span>
+          </div>
+          <div class="palace-station palace-station--placeholder">
+            <span class="palace-station__num">2</span>
+            <span class="palace-station__name">Definir ponto</span>
+          </div>
+          <div class="palace-station palace-station--placeholder">
+            <span class="palace-station__num">3</span>
+            <span class="palace-station__name">Definir ponto</span>
+          </div>
+          <div class="palace-station palace-station--placeholder">
+            <span class="palace-station__num">4</span>
+            <span class="palace-station__name">Definir ponto</span>
+          </div>
+          <div class="palace-station palace-station--more" aria-hidden="true">+8 pontos</div>
+        </div>
+        <a href="#" class="btn-soft palace-stations-cta">Configurar percurso</a>
+      </section>
+
+      <section class="palace-builder-section" aria-labelledby="system-num-title">
+        <h2 class="palace-builder-section__title" id="system-num-title">
+          <span class="palace-builder-section__step">3</span>
+          Sistema de conversão
+        </h2>
+        <p class="palace-builder-section__hint">Associe cada par de dígitos (00–99) a uma imagem memorável. O Major System usa sons das sílabas em português.</p>
+        <div class="palace-digit-grid" aria-label="Exemplos de conversão dígito-imagem">
+          <div class="palace-digit-item">
+            <span class="palace-digit-item__num">07</span>
+            <span class="palace-digit-item__img" aria-hidden="true">🌵</span>
+            <span class="palace-digit-item__word">Cacto</span>
+          </div>
+          <div class="palace-digit-item">
+            <span class="palace-digit-item__num">15</span>
+            <span class="palace-digit-item__img" aria-hidden="true">🎩</span>
+            <span class="palace-digit-item__word">Chapéu</span>
+          </div>
+          <div class="palace-digit-item">
+            <span class="palace-digit-item__num">51</span>
+            <span class="palace-digit-item__img" aria-hidden="true">🍋</span>
+            <span class="palace-digit-item__word">Limão</span>
+          </div>
+          <div class="palace-digit-item">
+            <span class="palace-digit-item__num">12</span>
+            <span class="palace-digit-item__img" aria-hidden="true">🪶</span>
+            <span class="palace-digit-item__word">Pena</span>
+          </div>
+        </div>
+        <a href="#" class="btn-soft palace-stations-cta">Personalizar tabela 00–99</a>
+      </section>
+
+      <section class="palace-builder-section" aria-labelledby="example-num-title">
+        <h2 class="palace-builder-section__title" id="example-num-title">
+          <span class="palace-builder-section__step">4</span>
+          Exemplo de memorização
+        </h2>
+        <div class="card palace-number-example">
+          <p class="palace-number-example__sequence" aria-label="Sequência 3, 14, 15, 9">3 · 14 · 15 · 9</p>
+          <ol class="palace-number-example__path">
+            <li><span class="palace-number-example__point">Ponto 1 — Portão</span> Borboleta (3)</li>
+            <li><span class="palace-number-example__point">Ponto 2 — Sala</span> Chapéu (14) + Limão (15)</li>
+            <li><span class="palace-number-example__point">Ponto 3 — Sofá</span> Pipa (9)</li>
+          </ol>
+          <p class="palace-number-example__note">Para recuperar, percorra o palácio e converta cada imagem de volta ao dígito.</p>
+        </div>
+      </section>
+
+      <a href="#" class="btn-play">Criar palácio de números</a>
+    </main>
+  </div>
+</body>
+</html>

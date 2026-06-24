@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palácio — Prototype 02</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <main class="content">
+      <header class="page-header">
+        <div>
+          <h1 class="page-greeting">Palácio</h1>
+          <p class="palace-page__subtitle">Método dos Loci — transforme dados abstratos em imagens fixadas num percurso familiar</p>
+        </div>
+      </header>
+
+      <section class="card palace-intro" aria-labelledby="palace-intro-title">
+        <h2 class="palace-intro__title" id="palace-intro-title">O que é o Palácio da Memória?</h2>
+        <p class="palace-intro__text">
+          Você escolhe um lugar que conhece bem — sua casa, o trabalho ou uma rota fixa — e define um caminho com até 12 pontos magnéticos. Cada carta ou número vira uma imagem vívida associada a um desses pontos. Na hora de lembrar, você percorre o caminho mentalmente e decodifica as imagens.
+        </p>
+        <ol class="palace-intro__steps">
+          <li>Escolha o ambiente e o percurso</li>
+          <li>Mapeie os pontos magnéticos</li>
+          <li>Converta cartas ou números em imagens</li>
+          <li>Revise caminhando pelo palácio</li>
+        </ol>
+      </section>
+
+      <h2 class="section-title">Seus palácios</h2>
+      <div class="palace-grid">
+        <a href="palacio-cartas.html" class="palace-tile">
+          <div class="palace-tile__visual">
+            <img src="assets/palace-cards.png" alt="" aria-hidden="true">
+          </div>
+          <div class="palace-tile__body">
+            <h3 class="palace-tile__title">Cartas</h3>
+            <div class="palace-tile__stats">
+              <span class="palace-tile__stat">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+                </svg>
+                00:01:52
+              </span>
+              <span class="palace-tile__stat">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="12" cy="8" r="5"/><path d="M8.5 14.5L6 21l6-3 6 3-2.5-6.5"/>
+                </svg>
+                16 cartas
+              </span>
+            </div>
+            <span class="btn-accent">Continuar</span>
+          </div>
+        </a>
+
+        <a href="palacio-numeros.html" class="palace-tile">
+          <div class="palace-tile__visual">
+            <img src="assets/palace-numbers.png" alt="" aria-hidden="true">
+          </div>
+          <div class="palace-tile__body">
+            <h3 class="palace-tile__title">Números</h3>
+            <div class="palace-tile__stats">
+              <span class="palace-tile__stat">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+                </svg>
+                Não iniciado
+              </span>
+              <span class="palace-tile__stat">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="12" cy="8" r="5"/><path d="M8.5 14.5L6 21l6-3 6 3-2.5-6.5"/>
+                </svg>
+                Não iniciado
+              </span>
+            </div>
+            <span class="btn-accent">Iniciar</span>
+          </div>
+        </a>
+      </div>
+
+      <section class="card palace-tip" aria-label="Dica do método">
+        <p class="palace-tip__label">Método Vitor Fuji</p>
+        <p class="palace-tip__text">
+          Use imagens grotescas, coloridas e inesperadas. Quanto mais absurda a cena no sofá ou na geladeira, mais fácil o cérebro fixa o dado — seja um artigo de lei, um naipe ou um dígito.
+        </p>
+      </section>
+    </main>
+
+    <nav class="tab-bar" aria-label="Navegação principal">
+      <div class="tab-bar__inner">
+        <a class="tab-item" href="daily.html">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/>
+          </svg>
+          Início
+        </a>
+        <a class="tab-item" href="games.html">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 12h4M14 12h4M12 6v4M12 14v4"/>
+            <rect x="2" y="6" width="20" height="12" rx="4"/>
+          </svg>
+          Jogos
+        </a>
+        <a class="tab-item tab-item--active" href="palacio.html" aria-current="page">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+          </svg>
+          Palácio
+        </a>
+        <a class="tab-item" href="profile.html">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+            <path d="M14 14H10c-2.76 0-5 2.24-5 5 0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2 0-2.76-2.24-5-5-5z"/>
+          </svg>
+          Perfil
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palácio de Cartas — Prototype 02</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <main class="content content--palace-builder">
+      <nav class="game-detail-nav" aria-label="Voltar">
+        <a href="palacio.html" class="game-detail-nav__back">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M15 6l-6 6 6 6"/>
+          </svg>
+          Palácio
+        </a>
+      </nav>
+
+      <div class="palace-builder-hero">
+        <img class="palace-builder-hero__img" src="assets/palace-cards.png" alt="" aria-hidden="true">
+        <div class="palace-builder-hero__overlay"></div>
+        <h1 class="palace-builder-hero__title">Palácio de Cartas</h1>
+        <p class="palace-builder-hero__desc">Memorize baralhos inteiros com o sistema PAO (Pessoa–Ação–Objeto)</p>
+      </div>
+
+      <div class="palace-builder-progress" aria-label="Progresso do palácio">
+        <div class="palace-builder-progress__item palace-builder-progress__item--done">
+          <span class="palace-builder-progress__dot" aria-hidden="true"></span>
+          <span>Ambiente</span>
+        </div>
+        <div class="palace-builder-progress__item palace-builder-progress__item--done">
+          <span class="palace-builder-progress__dot" aria-hidden="true"></span>
+          <span>Pontos</span>
+        </div>
+        <div class="palace-builder-progress__item palace-builder-progress__item--active">
+          <span class="palace-builder-progress__dot" aria-hidden="true"></span>
+          <span>Memorizar</span>
+        </div>
+        <div class="palace-builder-progress__item">
+          <span class="palace-builder-progress__dot" aria-hidden="true"></span>
+          <span>Revisar</span>
+        </div>
+      </div>
+
+      <section class="palace-builder-section" aria-labelledby="env-title">
+        <h2 class="palace-builder-section__title" id="env-title">
+          <span class="palace-builder-section__step">1</span>
+          Ambiente físico
+        </h2>
+        <p class="palace-builder-section__hint">Escolha um lugar que você percorre sempre na mesma ordem.</p>
+        <div class="palace-env-grid" role="list">
+          <div class="palace-env-option palace-env-option--selected" role="listitem">
+            <span class="palace-env-option__icon" aria-hidden="true">🏠</span>
+            <span class="palace-env-option__label">Minha casa</span>
+          </div>
+          <div class="palace-env-option" role="listitem">
+            <span class="palace-env-option__icon" aria-hidden="true">🏢</span>
+            <span class="palace-env-option__label">Trabalho</span>
+          </div>
+          <div class="palace-env-option" role="listitem">
+            <span class="palace-env-option__icon" aria-hidden="true">🚌</span>
+            <span class="palace-env-option__label">Rota do ônibus</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="palace-builder-section" aria-labelledby="points-title">
+        <h2 class="palace-builder-section__title" id="points-title">
+          <span class="palace-builder-section__step">2</span>
+          Pontos magnéticos
+        </h2>
+        <p class="palace-builder-section__hint">12 estações fixas ao longo do percurso. Cada grupo de 3 cartas ocupa um ponto.</p>
+        <div class="palace-stations" aria-label="12 pontos magnéticos">
+          <div class="palace-station palace-station--filled">
+            <span class="palace-station__num">1</span>
+            <span class="palace-station__name">Portão</span>
+            <span class="palace-station__cards" aria-label="3 cartas">🃏🃏🃏</span>
+          </div>
+          <div class="palace-station palace-station--filled">
+            <span class="palace-station__num">2</span>
+            <span class="palace-station__name">Sala</span>
+            <span class="palace-station__cards" aria-label="3 cartas">🃏🃏🃏</span>
+          </div>
+          <div class="palace-station palace-station--filled">
+            <span class="palace-station__num">3</span>
+            <span class="palace-station__name">Sofá</span>
+            <span class="palace-station__cards" aria-label="3 cartas">🃏🃏🃏</span>
+          </div>
+          <div class="palace-station palace-station--filled">
+            <span class="palace-station__num">4</span>
+            <span class="palace-station__name">TV</span>
+            <span class="palace-station__cards" aria-label="3 cartas">🃏🃏🃏</span>
+          </div>
+          <div class="palace-station palace-station--filled">
+            <span class="palace-station__num">5</span>
+            <span class="palace-station__name">Cozinha</span>
+            <span class="palace-station__cards" aria-label="3 cartas">🃏🃏🃏</span>
+          </div>
+          <div class="palace-station palace-station--partial">
+            <span class="palace-station__num">6</span>
+            <span class="palace-station__name">Geladeira</span>
+            <span class="palace-station__cards" aria-label="1 carta">🃏</span>
+          </div>
+          <div class="palace-station">
+            <span class="palace-station__num">7</span>
+            <span class="palace-station__name">Corredor</span>
+          </div>
+          <div class="palace-station">
+            <span class="palace-station__num">8</span>
+            <span class="palace-station__name">Quarto</span>
+          </div>
+          <div class="palace-station">
+            <span class="palace-station__num">9</span>
+            <span class="palace-station__name">Cama</span>
+          </div>
+          <div class="palace-station">
+            <span class="palace-station__num">10</span>
+            <span class="palace-station__name">Guarda-roupa</span>
+          </div>
+          <div class="palace-station">
+            <span class="palace-station__num">11</span>
+            <span class="palace-station__name">Banheiro</span>
+          </div>
+          <div class="palace-station">
+            <span class="palace-station__num">12</span>
+            <span class="palace-station__name">Espelho</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="palace-builder-section" aria-labelledby="pao-title">
+        <h2 class="palace-builder-section__title" id="pao-title">
+          <span class="palace-builder-section__step">3</span>
+          Sistema PAO
+        </h2>
+        <p class="palace-builder-section__hint">
+          Cada trio de cartas vira uma cena: a 1ª carta é a <strong>pessoa</strong>, a 2ª a <strong>ação</strong> e a 3ª o <strong>objeto</strong>. Exemplo: Rei de Copas → Einstein levantando → um martelo.
+        </p>
+        <div class="card palace-pao-example">
+          <div class="palace-pao-example__cards" aria-hidden="true">
+            <span>Q♥</span>
+            <span>J♦</span>
+            <span>K♣</span>
+          </div>
+          <p class="palace-pao-example__scene">Rainha de Copas (pessoa) cortando (ação) uma melancia gigante (objeto) no sofá da sala</p>
+        </div>
+      </section>
+
+      <section class="palace-builder-section" aria-labelledby="practice-title">
+        <h2 class="palace-builder-section__title" id="practice-title">
+          <span class="palace-builder-section__step">4</span>
+          Memorizar cartas
+        </h2>
+        <div class="palace-practice-card">
+          <div class="palace-practice-card__stats">
+            <div>
+              <span class="palace-practice-card__stat-label">Memorizadas</span>
+              <span class="palace-practice-card__stat-value">16 / 52</span>
+            </div>
+            <div>
+              <span class="palace-practice-card__stat-label">Tempo</span>
+              <span class="palace-practice-card__stat-value">00:01:52</span>
+            </div>
+          </div>
+          <p class="palace-practice-card__next">Próximo grupo: <strong>6♠ · 3♥ · 9♦</strong> → Geladeira</p>
+        </div>
+      </section>
+
+      <a href="#" class="btn-play">Continuar memorizando</a>
+      <a href="#" class="btn-soft palace-builder-secondary">Revisar palácio mentalmente</a>
+    </main>
+  </div>
+</body>
+</html>

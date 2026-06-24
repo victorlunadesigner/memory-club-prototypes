@@ -9,95 +9,125 @@
 <body>
   <div class="app">
     <main class="content">
-      <header class="top-bar">
-        <button type="button" class="icon-btn" aria-label="Notificações">
+      <header class="page-header">
+        <h1 class="page-greeting">Jogos</h1>
+        <button type="button" class="icon-btn" aria-label="Buscar jogos">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            <circle cx="11" cy="11" r="7"/>
+            <path d="M20 20l-3-3"/>
           </svg>
         </button>
-        <div class="logo-mark" aria-label="Clube da Memória">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 3v4M8 7h8M6 11h12v10H6z"/>
-            <circle cx="12" cy="16" r="2"/>
-          </svg>
-        </div>
-        <a href="#" class="streak-pill" aria-label="Sequência de 7 dias">
-          <span class="streak-pill__icon" aria-hidden="true">🔥</span>
-          <span>7</span>
-        </a>
       </header>
 
-      <h1 class="page-greeting">
-        Todos os jogos
-        <span>Micro-sessões para treinar agilidade mental</span>
-      </h1>
+      <section class="category-section" aria-labelledby="cat-memoria">
+        <a href="category-memoria.html" class="category-header" id="cat-memoria">
+          Memória
+          <svg class="category-header__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M9 6l6 6-6 6"/>
+          </svg>
+        </a>
+        <div class="game-showcase-grid">
+          <a href="game-paired-associates.html" class="game-showcase-card game-showcase-card--memoria-1">
+            <span class="game-showcase-card__rank" aria-hidden="true">1</span>
+            <img class="game-showcase-card__icon" src="assets/thumb-paired-associates.png" width="56" height="56" alt="" aria-hidden="true">
+            <div class="game-showcase-card__body">
+              <h3 class="game-showcase-card__title">Paired Associates</h3>
+              <p class="game-showcase-card__desc">Memorize a posição de cada par</p>
+              <span class="game-showcase-card__cta">Ver</span>
+            </div>
+          </a>
 
-      <section class="games-hero">
-        <div class="card">
-          <h2>Grade Espacial</h2>
-          <p>Memorize posições em uma grade — o exercício mais próximo do Palácio da Memória.</p>
-          <a href="#" class="btn-lime">Experimentar</a>
+          <a href="game-digit-span.html" class="game-showcase-card game-showcase-card--memoria-2">
+            <span class="game-showcase-card__rank" aria-hidden="true">2</span>
+            <img class="game-showcase-card__icon" src="assets/thumb-digit-span.png" width="56" height="56" alt="" aria-hidden="true">
+            <div class="game-showcase-card__body">
+              <h3 class="game-showcase-card__title">Digit Span</h3>
+              <p class="game-showcase-card__desc">Memorize a sequência e repita na ordem</p>
+              <span class="game-showcase-card__cta">Ver</span>
+            </div>
+          </a>
         </div>
       </section>
 
-      <h2 class="section-label">Catálogo</h2>
-      <div class="game-grid">
-        <a href="#" class="game-tile">
-          <div class="game-tile__emoji game-tile__emoji--seq" aria-hidden="true">🔢</div>
-          <div class="game-tile__body">
-            <h3>Sequência Numérica</h3>
-            <p>Lembre a ordem dos números exibidos</p>
-          </div>
-          <svg class="game-tile__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+      <section class="category-section" aria-labelledby="cat-raciocinio">
+        <a href="category-raciocinio.html" class="category-header" id="cat-raciocinio">
+          Raciocínio
+          <svg class="category-header__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
             <path d="M9 6l6 6-6 6"/>
           </svg>
         </a>
+        <div class="game-showcase-grid">
+          <a href="game-stroop-test.html" class="game-showcase-card game-showcase-card--raciocinio-1">
+            <span class="game-showcase-card__rank" aria-hidden="true">1</span>
+            <span class="game-showcase-card__icon game-showcase-card__icon--emoji" aria-hidden="true">◎</span>
+            <div class="game-showcase-card__body">
+              <h3 class="game-showcase-card__title">Stroop Test</h3>
+              <p class="game-showcase-card__desc">Reaja rápido e segure o impulso na hora certa</p>
+              <span class="game-showcase-card__cta">Ver</span>
+            </div>
+          </a>
 
-        <a href="#" class="game-tile">
-          <div class="game-tile__emoji game-tile__emoji--match" aria-hidden="true">🃏</div>
-          <div class="game-tile__body">
-            <h3>Pares de Cartas</h3>
-            <p>Encontre pares iguais pela memória</p>
-          </div>
-          <svg class="game-tile__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-            <path d="M9 6l6 6-6 6"/>
-          </svg>
-        </a>
+          <a href="game-token-search.html" class="game-showcase-card game-showcase-card--raciocinio-2">
+            <span class="game-showcase-card__rank" aria-hidden="true">2</span>
+            <span class="game-showcase-card__icon game-showcase-card__icon--emoji" aria-hidden="true">🔍</span>
+            <div class="game-showcase-card__body">
+              <h3 class="game-showcase-card__title">Token Search</h3>
+              <p class="game-showcase-card__desc">Encontre o alvo no meio dos distratores</p>
+              <span class="game-showcase-card__cta">Ver</span>
+            </div>
+          </a>
 
-        <a href="#" class="game-tile">
-          <div class="game-tile__emoji game-tile__emoji--recall" aria-hidden="true">📝</div>
-          <div class="game-tile__body">
-            <h3>Recuperação de Palavras</h3>
-            <p>Recorde palavras após um breve intervalo</p>
-          </div>
-          <svg class="game-tile__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-            <path d="M9 6l6 6-6 6"/>
-          </svg>
-        </a>
+          <a href="game-encaixe-sombra.html" class="game-showcase-card game-showcase-card--raciocinio-3">
+            <span class="game-showcase-card__rank" aria-hidden="true">3</span>
+            <span class="game-showcase-card__icon game-showcase-card__icon--emoji" aria-hidden="true">🧊</span>
+            <div class="game-showcase-card__body">
+              <h3 class="game-showcase-card__title">Encaixe Sombra</h3>
+              <p class="game-showcase-card__desc">Gire a peça até encaixar na sombra</p>
+              <span class="game-showcase-card__cta">Ver</span>
+            </div>
+          </a>
+        </div>
+      </section>
 
-        <a href="#" class="game-tile">
-          <div class="game-tile__emoji game-tile__emoji--pattern" aria-hidden="true">⚡</div>
-          <div class="game-tile__body">
-            <h3>Padrão Relâmpago</h3>
-            <p>Reproduza padrões exibidos rapidamente</p>
-          </div>
-          <svg class="game-tile__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+      <section class="category-section" aria-labelledby="cat-atencao">
+        <a href="category-atencao.html" class="category-header" id="cat-atencao">
+          Atenção
+          <svg class="category-header__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
             <path d="M9 6l6 6-6 6"/>
           </svg>
         </a>
+        <div class="game-showcase-grid">
+          <a href="game-feature-match.html" class="game-showcase-card game-showcase-card--atencao-1">
+            <span class="game-showcase-card__rank" aria-hidden="true">1</span>
+            <span class="game-showcase-card__icon game-showcase-card__icon--emoji" aria-hidden="true">👁️</span>
+            <div class="game-showcase-card__body">
+              <h3 class="game-showcase-card__title">Feature Match</h3>
+              <p class="game-showcase-card__desc">Compare os padrões e responda rápido</p>
+              <span class="game-showcase-card__cta">Ver</span>
+            </div>
+          </a>
 
-        <a href="#" class="game-tile">
-          <div class="game-tile__emoji game-tile__emoji--seq" aria-hidden="true">🗺️</div>
-          <div class="game-tile__body">
-            <h3>Grade Espacial</h3>
-            <p>Lembre posições em uma grade</p>
-          </div>
-          <svg class="game-tile__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-            <path d="M9 6l6 6-6 6"/>
-          </svg>
-        </a>
-      </div>
+          <a href="game-atencao-sustentada.html" class="game-showcase-card game-showcase-card--atencao-2">
+            <span class="game-showcase-card__rank" aria-hidden="true">2</span>
+            <span class="game-showcase-card__icon game-showcase-card__icon--emoji" aria-hidden="true">⚡</span>
+            <div class="game-showcase-card__body">
+              <h3 class="game-showcase-card__title">Atenção Sustentada</h3>
+              <p class="game-showcase-card__desc">Mantenha o foco por 3 minutos contínuos sem perder o ritmo</p>
+              <span class="game-showcase-card__cta">Ver</span>
+            </div>
+          </a>
+
+          <a href="game-torre-de-controle.html" class="game-showcase-card game-showcase-card--atencao-3">
+            <span class="game-showcase-card__rank" aria-hidden="true">3</span>
+            <span class="game-showcase-card__icon game-showcase-card__icon--emoji" aria-hidden="true">🗼</span>
+            <div class="game-showcase-card__body">
+              <h3 class="game-showcase-card__title">Torre de Controle</h3>
+              <p class="game-showcase-card__desc">Direcione os balões e neutralize os dirigíveis</p>
+              <span class="game-showcase-card__cta">Ver</span>
+            </div>
+          </a>
+        </div>
+      </section>
     </main>
 
     <nav class="tab-bar" aria-label="Navegação principal">
@@ -115,7 +145,7 @@
           </svg>
           Jogos
         </a>
-        <a class="tab-item" href="daily.html#palacio">
+        <a class="tab-item" href="palacio.html">
           <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
           </svg>

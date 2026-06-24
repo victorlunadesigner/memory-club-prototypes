@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stroop Test — Prototype 02</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <main class="content content--game-detail">
+      <nav class="game-detail-nav" aria-label="Voltar">
+        <a href="games.html" class="game-detail-nav__back">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M15 6l-6 6 6 6"/>
+          </svg>
+          Jogos
+        </a>
+      </nav>
+
+      <div class="game-detail-hero game-detail-hero--raciocinio">
+        <div class="game-detail-hero__overlay"></div>
+        <h1 class="game-detail-hero__title">Stroop Test</h1>
+      </div>
+
+      <div class="game-detail-score">
+        <span class="game-detail-score__label">Última pontuação</span>
+        <span class="game-detail-score__value">68</span>
+      </div>
+
+      <section class="game-detail-section">
+        <h2 class="game-detail-section__title">Como jogar</h2>
+        <p class="game-detail-section__text">
+          Palavras aparecem coloridas na tela, mas você deve identificar a cor da tinta — não o significado da palavra. Responda o mais rápido possível sem cair na armadilha do texto.
+        </p>
+      </section>
+
+      <hr class="game-detail-separator" aria-hidden="true">
+
+      <section class="game-detail-section">
+        <h2 class="game-detail-section__title">Como ajuda no raciocínio</h2>
+        <p class="game-detail-section__text">
+          Exige inibir a resposta automática e escolher a ação correta sob pressão. Fortalece o controle cognitivo e a flexibilidade mental necessários em provas, leituras críticas e decisões rápidas.
+        </p>
+      </section>
+
+      <a href="#" class="btn-play">Jogar agora</a>
+    </main>
+  </div>
+</body>
+</html>

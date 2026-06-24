@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raciocínio — Prototype 02</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <main class="content">
+      <nav class="game-detail-nav" aria-label="Voltar">
+        <a href="games.html" class="game-detail-nav__back">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M15 6l-6 6 6 6"/>
+          </svg>
+          Jogos
+        </a>
+      </nav>
+
+      <h1 class="page-greeting">Raciocínio</h1>
+
+      <div class="training-list">
+        <a href="game-stroop-test.html" class="training-card">
+          <svg class="training-card__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M9 6l6 6-6 6"/>
+          </svg>
+          <span class="training-card__thumb training-card__thumb--emoji" aria-hidden="true">◎</span>
+          <h3 class="training-card__title">Stroop Test</h3>
+          <p class="training-card__desc">Reaja rápido e segure o impulso na hora certa</p>
+          <div class="training-card__footer">
+            <span class="training-card__duration">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+              </svg>
+              3 min
+            </span>
+          </div>
+        </a>
+
+        <a href="game-token-search.html" class="training-card">
+          <svg class="training-card__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M9 6l6 6-6 6"/>
+          </svg>
+          <span class="training-card__thumb training-card__thumb--emoji" aria-hidden="true">🔍</span>
+          <h3 class="training-card__title">Token Search</h3>
+          <p class="training-card__desc">Encontre o alvo no meio dos distratores</p>
+          <div class="training-card__footer">
+            <span class="training-card__duration">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+              </svg>
+              4 min
+            </span>
+          </div>
+        </a>
+
+        <a href="game-encaixe-sombra.html" class="training-card">
+          <svg class="training-card__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M9 6l6 6-6 6"/>
+          </svg>
+          <span class="training-card__thumb training-card__thumb--emoji" aria-hidden="true">🧊</span>
+          <h3 class="training-card__title">Encaixe Sombra</h3>
+          <p class="training-card__desc">Gire a peça até encaixar na sombra</p>
+          <div class="training-card__footer">
+            <span class="training-card__duration">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+              </svg>
+              4 min
+            </span>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <nav class="tab-bar" aria-label="Navegação principal">
+      <div class="tab-bar__inner">
+        <a class="tab-item" href="daily.html">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/>
+          </svg>
+          Início
+        </a>
+        <a class="tab-item tab-item--active" href="games.html" aria-current="page">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 12h4M14 12h4M12 6v4M12 14v4"/>
+            <rect x="2" y="6" width="20" height="12" rx="4"/>
+          </svg>
+          Jogos
+        </a>
+        <a class="tab-item" href="palacio.html">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+          </svg>
+          Palácio
+        </a>
+        <a class="tab-item" href="profile.html">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+            <path d="M14 14H10c-2.76 0-5 2.24-5 5 0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2 0-2.76-2.24-5-5-5z"/>
+          </svg>
+          Perfil
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>
