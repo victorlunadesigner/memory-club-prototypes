@@ -101,26 +101,34 @@
     </main>
 
     <nav class="tab-bar" aria-label="Navegação principal">
-      <a class="tab-item" href="daily.html">
-        <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/>
-        </svg>
-        Hoje
-      </a>
-      <a class="tab-item tab-item--active" href="games.html" aria-current="page">
-        <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M11 13H13"/><path d="M12 9V3"/>
-          <path d="M20.15 20.92C22.01 20.33 22.56 16.75 21.37 12.93C20.18 9.11 17.71 6.49 15.85 7.08C14.7 7.45 14.64 8.86 13.7 9.38C13.47 9.5 13.16 9.5 12.53 9.5h-1.07c-.63 0-.94 0-1.17-.12-.94-.52-1-1.93-2.15-2.3-1.86-.59-4.33 2.03-5.52 5.85-1.19 3.82-.64 7.39 1.22 7.98C6.21 21.35 7.89 20.07 9.16 17.86C10.01 16.39 10.4 16 12.1 16h1.8c1.7 0 2.09.39 2.94 1.86c1.27 2.21 2.95 3.49 4.31 3.06z"/>
-        </svg>
-        Jogos
-      </a>
-      <a class="tab-item" href="profile.html">
-        <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
-          <path d="M14 14H10c-2.76 0-5 2.24-5 5 0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2 0-2.76-2.24-5-5-5z"/>
-        </svg>
-        Perfil
-      </a>
+      <div class="tab-bar__inner">
+        <a class="tab-item" href="daily.html">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/>
+          </svg>
+          Início
+        </a>
+        <a class="tab-item tab-item--active" href="games.html" aria-current="page">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 12h4M14 12h4M12 6v4M12 14v4"/>
+            <rect x="2" y="6" width="20" height="12" rx="4"/>
+          </svg>
+          Jogos
+        </a>
+        <a class="tab-item" href="daily.html#palacio">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+          </svg>
+          Palácio
+        </a>
+        <a class="tab-item" href="profile.html">
+          <svg class="tab-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+            <path d="M14 14H10c-2.76 0-5 2.24-5 5 0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2 0-2.76-2.24-5-5-5z"/>
+          </svg>
+          Perfil
+        </a>
+      </div>
     </nav>
   </div>
 </body>
